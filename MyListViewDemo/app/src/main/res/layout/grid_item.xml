@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--<com.facebook.drawee.view.SimpleDraweeView-->
+        <!--android:id="@+id/draweeView"-->
+        <!--android:layout_width="150px"-->
+        <!--android:layout_height="150px"-->
+        <!--fresco:roundAsCircle="true"-->
+        <!--fresco:roundingBorderWidth="1dp"-->
+        <!--fresco:roundingBorderColor="#dedede"-->
+        <!--fresco:failureImage="@drawable/default_ptr_rotate"-->
+        <!--fresco:placeholderImage="@drawable/anim_circle_128_0"-->
+    <!--/>-->
+
+    <ImageView
+        android:id="@+id/draweeView"
+        android:layout_width="150px"
+        android:layout_height="150px"/>
+
+</RelativeLayout>
