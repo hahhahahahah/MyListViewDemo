@@ -40,6 +40,7 @@ public class MainActivity extends BaseActivity {
         //给ViewPager设置适配器
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(), fragmentList));
         viewPager.addOnPageChangeListener(new MyOnPageChangeListener());//页面变化时的监听器
+        viewPager.setCurrentItem(0);//设置为第一个界面
     }
 
 

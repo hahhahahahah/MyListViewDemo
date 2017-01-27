@@ -2,7 +2,6 @@ package com.org.zl.mylistviewdemo.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,7 +20,6 @@ import com.org.zl.mylistviewdemo.base.BaseFragment;
 import com.org.zl.mylistviewdemo.constant.HttpManager;
 import com.org.zl.mylistviewdemo.utils.GetCallBack;
 
-import java.lang.reflect.Field;
 import java.util.HashSet;
 
 /**
@@ -94,19 +92,4 @@ public class NewsFragment extends BaseFragment implements SwipeRefreshLayout.OnR
         listView.setEmptyView(bd_empty_view);
     }
 
-    //不加这个会报异常，不晓得为啥呢
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        try {
-            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
-            childFragmentManager.setAccessible(true);
-            childFragmentManager.set(this, null);
-
-        } catch (NoSuchFieldException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
